@@ -20,7 +20,7 @@ local c = {
   steel        = "#718ca1",
   red          = "#e27e8d",
   green        = "#54af83",
-  blue         = "#68a1f0",
+  blue         = "#539afc",
   yellow       = "#ebda65",
   aqua         = "#9effff",
   orange       = "#ebbf83",
@@ -168,6 +168,11 @@ set("@variable",         { fg = c.steel })
 set("@variable.builtin", { fg = c.sage })
 set("@variable.parameter", { fg = c.orange })
 set("@variable.member",  { fg = c.steel })
+
+-- Bash overrides
+set("@string.bash", { fg = c.blue })
+set("@variable.bash", { fg = c.orange })
+set("shDerefSimple", { fg = c.orange })
 
 set("@function",         { fg = c.teal })
 set("@function.builtin", { fg = c.teal })

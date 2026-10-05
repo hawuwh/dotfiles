@@ -19,7 +19,8 @@ bindsym $mod+e workspace number 4, exec --no-startup-id thunar
 bindsym $mod+t workspace number 1, exec --no-startup-id helium
 bindsym $mod+m workspace number 10, exec --no-startup-id "alacritty --class termusic,termusic -e /home/how/.local/share/cargo/bin/termusic"
 bindsym $mod+p workspace number 3, exec --no-startup-id sioyek
-bindsym $mod+o workspace number 5, exec --no-startup-id virtualbox
+bindsym $mod+v workspace number 5, exec --no-startup-id virtualbox
+bindsym $mod+o workspace number 2, exec --no-startup-id "alacritty --class todo,todo -e /home/how/.local/bin/todo-glow /home/how/Documents/todo.md"
 
 # window controls
 bindsym $mod+q kill
@@ -141,6 +142,7 @@ for_window [instance="^VirtualBox Machine$" class="^VirtualBox Machine$"] floati
 for_window [class="^VirtualBox$" title=".* - Settings$"] floating enable, move position center
 for_window [class="^VirtualBox$" title=".* - Preferences$"] floating enable, move position center
 for_window [class="Nsxiv"] floating enable
+for_window [class="^todo$"] floating enable, resize set 800 450, move position 1108 px 40 px 
 
 # bar
 bar {
