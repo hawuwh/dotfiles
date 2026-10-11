@@ -1,3 +1,12 @@
+[music]
+command=~/.config/i3blocks/scripts/music.sh
+interval=2
+
+[volume]
+command=~/.config/i3blocks/scripts/volume.sh
+interval=once
+signal=10
+
 [wifi]
 command=~/.config/i3blocks/scripts/wifi.sh
 interval=5
@@ -11,11 +20,6 @@ signal=11
 command=~/.config/i3blocks/scripts/battery.sh
 interval=10
 
-[volume]
-command=~/.config/i3blocks/scripts/volume.sh
-interval=once
-signal=10
-
 [time]
-command=date '+%H:%M %m/%d/%y '
+command=date '+%a, %b %d %I:%M %p '
 interval=30

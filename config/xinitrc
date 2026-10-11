@@ -18,10 +18,12 @@ systemctl --user import-environment \
     XDG_SESSION_DESKTOP \
     DESKTOP_SESSION
 
+xss-lock --transfer-sleep-lock -- xsecurelock &
 xfsettingsd &
 xfce4-power-manager &
 xfce4-notifyd &
 mate-polkit &
 thunar --daemon &
+feh --bg-fill ~/Pictures/wallpapers/wallpaper4.png
 
 exec i3

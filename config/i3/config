@@ -1,15 +1,13 @@
 # general
 set $mod Mod4
-font pango:Hack 11
+font pango:Hack 10
 
 floating_modifier $mod
 tiling_drag modifier titlebar
 
 # startup
 #exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- xsecurelock
-exec --no-startup-id xfsettingsd
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wallpaper4.png
+#exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wallpaper4.png
 
 # programs
 bindsym $mod+Return exec alacritty
@@ -21,6 +19,7 @@ bindsym $mod+m workspace number 10, exec --no-startup-id "alacritty --class term
 bindsym $mod+p workspace number 3, exec --no-startup-id sioyek
 bindsym $mod+v workspace number 5, exec --no-startup-id virtualbox
 bindsym $mod+o workspace number 2, exec --no-startup-id "alacritty --class todo,todo -e /home/how/.local/bin/todo-glow /home/how/Documents/todo.md"
+#bindsym $mod+y workspace number 2, exec --no-startup-id "alacritty -e nvim"
 
 # window controls
 bindsym $mod+q kill
@@ -46,11 +45,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+s layout toggle split
-bindsym $mod+w layout tabbed
+bindsym $mod+s split toggle
+bindsym $mod+w layout toggle tabbed split
 
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
+
+bindsym $mod+Tab focus next
+force_focus_wrapping yes
 
 # workspaces
 set $ws1 "1"
@@ -142,12 +144,12 @@ for_window [instance="^VirtualBox Machine$" class="^VirtualBox Machine$"] floati
 for_window [class="^VirtualBox$" title=".* - Settings$"] floating enable, move position center
 for_window [class="^VirtualBox$" title=".* - Preferences$"] floating enable, move position center
 for_window [class="Nsxiv"] floating enable
-for_window [class="^todo$"] floating enable, resize set 800 450, move position 1108 px 40 px 
+for_window [class="^todo$"] floating enable, resize set 800 450, move position 1108 px 40 px
 
 # bar
 bar {
         position top
         status_command i3blocks
-        separator_symbol "::"
+        separator_symbol "  "
         tray_output none
 }

@@ -2,22 +2,20 @@
 command=~/.config/i3blocks/scripts/wifi.sh
 interval=5
 
+[brightness]
+command=~/.config/i3blocks/scripts/brightness.sh
+interval=once
+signal=11
+
 [battery]
-command=cat /sys/class/power_supply/BAT1/capacity
-interval=30
-label=BAT 
+command=~/.config/i3blocks/scripts/battery.sh
+interval=10
 
 [volume]
-command=pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5; exit}'
+command=~/.config/i3blocks/scripts/volume.sh
 interval=once
 signal=10
-label=VOL 
-
-[temp]
-command=cat /sys/class/thermal/thermal_zone0/temp | awk '{printf "%.0f°C\n", $1/1000}'
-interval=10
-label=CPU 
 
 [time]
-command=date '+%a %d %b %I:%M %p '
+command=date '+%H:%M [%m/%d/%y] '
 interval=30
