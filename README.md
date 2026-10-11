@@ -171,19 +171,3 @@ These are part of my setup but may need to be installed separately depending on 
 - Termusic
 - PlatformIO Core
 
-## Notes
-
-This setup intentionally does not use:
-
-- a display manager
-- a full XFCE session
-- `xfwm4`
-- an XFCE panel
-- a compositor
-
-The desktop flow is simply:
-
-```text
-TTY login -> startx -> i3
-```
-
