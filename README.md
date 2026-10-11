@@ -25,8 +25,6 @@ The goal is a simple and fast X11/i3 setup without a full desktop environment or
 - MATE polkit agent
 - No compositor
 
-The dotfiles already contain the relevant `.bash_profile`, `.xinitrc`, i3, i3blocks, Alacritty, and Neovim configuration. X is started from TTY1 and the session services are launched from `.xinitrc`.
-
 ## Debian packages
 
 ```bash
@@ -172,27 +170,6 @@ These are part of my setup but may need to be installed separately depending on 
 - VirtualBox
 - Termusic
 - PlatformIO Core
-
-## Fonts
-
-User-installed fonts go in:
-
-```text
-~/.local/share/fonts/
-```
-
-After adding fonts:
-
-```bash
-fc-cache -fv
-```
-
-Check installed/resolved fonts with:
-
-```bash
-fc-list : family | sort -u
-fc-match "Font Name"
-```
 
 ## Notes
 
