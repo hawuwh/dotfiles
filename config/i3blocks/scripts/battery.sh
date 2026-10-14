@@ -7,6 +7,8 @@ if [ $STATUS = "Charging" ]; then
     DISPLAY_STATUS='+'
 elif [ $STATUS = "Discharging" ]; then
     DISPLAY_STATUS='-'
+elif [ $STATUS = "Not charging" ]; then
+    DISPLAY_STATUS='='
 else 
     DISPLAY_STATUS='FULL'
 fi

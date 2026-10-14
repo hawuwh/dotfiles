@@ -151,5 +151,4 @@ bar {
         position top
         status_command i3blocks
         separator_symbol "  "
-        tray_output none
 }

@@ -121,3 +121,4 @@ alias todo='~/.local/bin/todo-glow ~/Documents/todo.md'
 alias vim='nvim'
 . "$HOME/.cargo/env"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
+. "/home/how/.deno/env"
